@@ -3,5 +3,5 @@ import $ from 'jQuery'
 
 
 $(window).on('click',function(){
-    alert(2);
+    console.log(1);
 });
