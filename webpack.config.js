@@ -5,23 +5,22 @@ const postcssPresetEnv = require('postcss-preset-env');
 
 module.exports = {
     // メインとなるJavaScriptファイル（エントリーポイント）
-    entry: `./src/js/index.js`,
+    entry: `./src/js/script.js`,
 
     // ファイルの出力設定
     output: {
       //  出力ファイルのディレクトリ名
       path: path.join(__dirname, 'dist/'),
       // 出力ファイル名
-      filename: "js/common.js",
+      filename: "common/js/script.js",
     },
 
     mode: "development",
     // ローカル開発用環境を立ち上げる
     // 実行時にブラウザが自動的に localhost を開く
     devServer: {
-      contentBase: path.join(__dirname, 'dist'),
+      contentBase: path.join(__dirname, 'dist/'),
       watchContentBase: true,
-      disableHostCheck: true,
       open: true
     },
 
@@ -75,7 +74,7 @@ module.exports = {
     },
     plugins: [
       new MiniCssExtractPlugin({
-        filename: 'css/styles.css'
+        filename: 'common/css/style.css'
       }),
     ]
 };

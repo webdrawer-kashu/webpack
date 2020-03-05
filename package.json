@@ -4,8 +4,9 @@
   "description": "webpack-sample file",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "build:p": "webpack --mode=production",
+    "start": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
